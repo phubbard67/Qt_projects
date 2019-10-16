@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDir>
+
+#define LINUX_PATH "/VaVaVaVideo"
+#define WIND_PATH  "C:\\VaVaVaVideo\\"
+#define INI_FILE   "video.ini"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +22,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString m_strMovieDir;
+    QString m_strTVDir;
+    QString m_iniFile;
+
+private slots:
+    void on_actionChange_Movie_Directory_triggered();
 };
 #endif // MAINWINDOW_H
